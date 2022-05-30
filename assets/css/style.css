@@ -18,3 +18,7 @@ header {
 main {
     padding-top: 20px;
 }
+
+.bg-info {
+    background-color: blanchedalmond;
+}
