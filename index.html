@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row">
+            <div class="search col-lg-3 col-md-4 col-sm-6 left-panel">
+                <h2 class="h2heading">Search for a City:</h2>
+                    <form class="row mr-2">
+                        <div class="col-12">
+                            <input type="text" class="location-input" id="city-input" name="city-input" placeholder="Type City Here" required>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <button type="submit" class="search-btn" id="search-btn">Search</button>
+                        </div>
+                    </form>
+
+                    <div class="row d-flex align-items-center">
+                        <div class="col-12" id="search-list">
+                        </div>
+                    </div>
+            </div>
+
+            <div class="col-lg-9 col-md-8 col-sm-6 right-panel">
+                <div class="row current-day mr-2">
+                    <div class="col-12">
+                        <h2><span class="h2heading" id="today"></span> <span class="h2heading" id="city"></span> <img class="icon-large"id="icon" src="" /> </h2>
+                        <p>Temp: <span id="temperature"></span></p>
+                        <p>Wind: <span id="wind-speed"></span></p>
+                        <p>Humidity: <span id="humidity-percent"></span></p>
+                        <p>UV Index: <span id="uv-index"></span></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h3>5-Day Forecast:</h3>
+                    </div>
+                </div>
+                <div class="row daily-cards d-flex justify-content-between mr-2">
+                    <!-- Day 1 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 card bg-info">
+                        <p id="day1" class="day-date"></p>
+                        <img class="icon-small" id="icon1"></img>
+                        <p>Temp: <span id="temp1"></span></p>
+                        <p>Wind: <span id="wind1"></span></p>
+                        <p>Humidity: <span id="humidity1"></span></p>
+                    </div>
+                    <!-- Day 2 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 card bg-info">
+                        <p id="day2" class="day-date"></p>
+                        <img class="icon-small" id="icon2"></img>
+                        <p>Temp: <span id="temp2"></span></p>
+                        <p>Wind: <span id="wind2"></span></p>
+                        <p>Humidity: <span id="humidity2"></span></p>
+                    </div>
+                    <!-- Day 3 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 card bg-info">
+                        <p id="day3" class="day-date"></p>
+                        <img class="icon-small" id="icon3"></img>
+                        <p>Temp: <span id="temp3"></span></p>
+                        <p>Wind: <span id="wind3"></span></p>
+                        <p>Humidity: <span id="humidity3"></span></p>
+                    </div>
+                    <!-- Day 4 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 card bg-info">
+                        <p id="day4" class="day-date"></p>
+                        <img class="icon-small" id="icon4"></img>
+                        <p>Temp: <span id="temp4"></span></p>
+                        <p>Wind: <span id="wind4"></span></p>
+                        <p>Humidity: <span id="humidity4"></span></p>
+                    </div>
+                    <!-- Day 5 -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 card bg-info">
+                        <p id="day5" class="day-date"></p>
+                        <img class="icon-small" id="icon5"></img>
+                        <p>Temp: <span id="temp5"></span></p>
+                        <p>Wind: <span id="wind5"></span></p>
+                        <p>Humidity: <span id="humidity5"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
